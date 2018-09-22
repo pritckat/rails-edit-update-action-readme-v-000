@@ -790,3 +790,15 @@ Processing by PostsController#edit as HTML
   [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
   Rendered posts/edit.html.erb within layouts/application (2.0ms)
 Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/posts/2" for 68.103.223.227 at 2018-09-22 16:40:42 +0000
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5VHhyjxYqnev7Xr3/q3Ss5ZYJuS3vVzQ3wQX9UKp8jwaKnZpgEqlBPggXtoAMtbi2HR1x7BdvTi2+C1fPMgwoQ==", "post"=>{"title"=>"Rails Introduction bbb", "description"=>"asdfasdfa"}, "commit"=>"Submit Post", "id"=>"2"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://67.205.152.27:50426/posts/2
+Completed 302 Found in 9ms (ActiveRecord: 1.2ms)
