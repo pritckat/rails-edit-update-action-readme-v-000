@@ -748,3 +748,37 @@ Processing by PostsController#update as HTML
   [1m[35m (2.3ms)[0m  commit transaction
 Redirected to http://67.205.152.27:50426/posts/2
 Completed 302 Found in 46ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/posts/2" for 68.103.223.227 at 2018-09-22 16:39:21 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/2/edit" for 68.103.223.227 at 2018-09-22 16:39:30 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/posts/2" for 68.103.223.227 at 2018-09-22 16:39:49 +0000
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lXrvuOZS0kbT9JwZzWN47xKH6Iki9pZ64f6pQj5cReRqAXgbWkDdNYQ5uDQz/Hy+XKu7qiUWd5KIApPoQD2HeQ==", "post"=>{"title"=>"Rails Introduction bbb", "description"=>"asdfasdfa"}, "commit"=>"Submit Post", "id"=>"2"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://67.205.152.27:50426/posts/2
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/2" for 68.103.223.227 at 2018-09-22 16:39:49 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.1ms)
